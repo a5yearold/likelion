@@ -28,7 +28,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Likelion</a>
+      <a class="navbar-brand" href="/index">Likelion</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,8 +38,19 @@
       </ul>
  
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Sign up</a></li>
-        <li><a href="#">Login</a></li>
+        <% if user_signed_in? %>
+        <li><a href="/users/edit">My Account</a></li>
+        <!--<li><a href="/users/sign_out">Logout</a></li> -->
+        
+        <% if false %>
+        <li><%= link_to 'logout', destroy_user_session_path, method: 'delete' %></li>
+        <% end %>
+        
+        <% else %>
+        
+        <li><a href="/users/sign_up">Sign up</a></li>
+        <li><a href="/users/sign_in">Login</a></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

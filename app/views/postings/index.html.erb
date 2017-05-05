@@ -1,5 +1,5 @@
 <h1>Add a posting</h1>
-
+<h4><b><font color="red"><%= flash[:error] %></font></b></h4>
 <form action="/postings/create" method="POST">
     <div class="form-group">
       <label for="title">Title:</label>
@@ -16,6 +16,11 @@
 <% @all_postings.each do |p| %>
    <h3>Title: <%= p.title %></h3>
    <p>Content: <%= p.posting_content %></p>
+   
+   <p><a href="/postings/update/<%= p.id %>">Update</a>
+      <a href="/postings/destroy/<%= p.id %>">Delete</a></p>
+   
+   
    
    <% @all_comments.each do |c| %>
       <% if c.posting_id == p.id %>
