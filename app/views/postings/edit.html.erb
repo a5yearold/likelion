@@ -1,0 +1,12 @@
+<h1>Edit a posting</h1>
+<form action="/postings/update/<%= @posting.id %>" method="POST">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" name="title" value="<%= @posting.title %>" class="form-control" id="title">
+    </div>
+    <div class="form-group">
+      <label for="posting_content">Content:</label>
+      <textarea name="content" class="form-control" rows="5" id="content"> <%= @posting.posting_content %> </textarea>
+    </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+</form>
