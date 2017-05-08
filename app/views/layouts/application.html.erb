@@ -33,18 +33,18 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Postings</a></li>
+      <!--<ul class="nav navbar-nav">
+        <li><a href="/users/sign_out">Logout</a></li>
       </ul>
- 
+       -->
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
         <li><a href="/users/edit">My Account</a></li>
         <!--<li><a href="/users/sign_out">Logout</a></li> -->
         
-        <% if false %>
+        
         <li><%= link_to 'logout', destroy_user_session_path, method: 'delete' %></li>
-        <% end %>
+        
         
         <% else %>
         

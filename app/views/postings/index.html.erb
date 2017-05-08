@@ -16,10 +16,10 @@
 <% @all_postings.each do |p| %>
    <h3>Title: <%= p.title %></h3>
    <p>Content: <%= p.posting_content %></p>
-   
-   <p><a href="/postings/update/<%= p.id %>">Update</a>
-      <a href="/postings/destroy/<%= p.id %>">Delete</a></p>
-   
+    <% if p.user_id == current_user.id %>
+       <p><a href="/postings/update/<%= p.id %>">Update</a>
+          <a href="/postings/destroy/<%= p.id %>">Delete</a></p>
+    <% end %>
    
    
    <% @all_comments.each do |c| %>
