@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170501110524) do
+=======
+ActiveRecord::Schema.define(version: 20170501111137) do
+>>>>>>> d25d03c257b062a5f9cf09171abb27362d0084a8
 
   create_table "comments", force: :cascade do |t|
     t.text     "comment_content"
@@ -40,10 +44,13 @@ ActiveRecord::Schema.define(version: 20170501110524) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+<<<<<<< HEAD
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+=======
+>>>>>>> d25d03c257b062a5f9cf09171abb27362d0084a8
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end

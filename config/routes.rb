@@ -27,7 +27,10 @@
 
 Rails.application.routes.draw do
   devise_for :users
+<<<<<<< HEAD
   
+=======
+>>>>>>> d25d03c257b062a5f9cf09171abb27362d0084a8
   root 'postings#index'
 
   
@@ -35,10 +38,19 @@ Rails.application.routes.draw do
   post '/postings/create' => 'postings#create'
   post '/comments/create' => 'comments#create'
   
+<<<<<<< HEAD
   get '/postings/destroy/:id_of_posting' => 'postings#destroy'
   
   get '/postings/edit/:id_of_posting' => 'postings#edit'
   post '/postings/update/:id_of_posting' => 'postings#update'
+=======
+  get 'postings/destroy/:id_of_posting' => 'postings#destroy'
+  get 'postings/update/:id_of_posting' => 'postings#update'
+  
+  post 'postings/update/:id_of_posting' => 'postings#recreate'
+  
+  
+>>>>>>> d25d03c257b062a5f9cf09171abb27362d0084a8
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

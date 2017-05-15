@@ -11,10 +11,18 @@
 #
 
 class Posting < ActiveRecord::Base
+<<<<<<< HEAD
     
     belongs_to :user
     has_many :comments
     
     validates :title, presence: true
     validates :posting_content, presence: true
+=======
+    belongs_to :user
+    has_many :comments
+    validates :title, presence: true, length: {minimum:3}
+    validates :posting_content, presence: true
+    
+>>>>>>> d25d03c257b062a5f9cf09171abb27362d0084a8
 end

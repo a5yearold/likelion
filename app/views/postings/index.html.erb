@@ -1,5 +1,9 @@
 <h1>Add a posting</h1>
+<<<<<<< HEAD
 <h4><%= flash[:error] %></h4>
+=======
+<h4><b><font color="red"><%= flash[:error] %></font></b></h4>
+>>>>>>> d25d03c257b062a5f9cf09171abb27362d0084a8
 <form action="/postings/create" method="POST">
     <div class="form-group">
       <label for="title">Title:</label>
@@ -16,6 +20,11 @@
 <% @all_postings.each do |p| %>
    <h3>Title: <%= p.title %></h3>
    <p>Content: <%= p.posting_content %></p>
+    <% if p.user_id == current_user.id %>
+       <p><a href="/postings/update/<%= p.id %>">Update</a>
+          <a href="/postings/destroy/<%= p.id %>">Delete</a></p>
+    <% end %>
+   
    
     <% if user_signed_in? %>
        <% if p.user_id == current_user.id %>
